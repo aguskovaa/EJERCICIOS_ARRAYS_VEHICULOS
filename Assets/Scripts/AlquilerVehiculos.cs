@@ -6,6 +6,7 @@ public class AlquilerVehiculos : MonoBehaviour
 {
     public GameObject[] vehiculos;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,8 @@ public class AlquilerVehiculos : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            
+            ElimininarAutos();
+            vehiculos[Random.Range(0, vehiculos.Length)].SetActive(true);
         }   
     }
 
