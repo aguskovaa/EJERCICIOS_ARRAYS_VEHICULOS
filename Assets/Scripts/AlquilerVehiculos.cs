@@ -17,12 +17,20 @@ public class AlquilerVehiculos : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-
+            
         }   
     }
 
     void ResetearVehiculos()
     {
-
+        ElimininarAutos();
+        vehiculos[0].SetActive(true);
+    }
+    void ElimininarAutos()
+    {
+        foreach (GameObject g in vehiculos)
+        {
+            g.SetActive(false);
+        }
     }
 }
